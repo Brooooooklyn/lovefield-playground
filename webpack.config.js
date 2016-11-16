@@ -27,6 +27,9 @@ const webpackConfig = {
   ],
 
   module: {
+    preLoaders: [
+      { test: /\.js$/, loader: 'source-map-loader', include: /lovefield|rxjs/ }
+    ],
     loaders: [
       { test: /\.ts$/, loader: 'ts' },
       { test: /\.html$/, loader: 'raw-loader' }
